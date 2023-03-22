@@ -1,6 +1,6 @@
 #include "../../headers/Hardware/LSM9DS1_Accelerometer.h"
 
-LSM9DS1_Accelerometer::LSM9DS1_Accelerometer(LSM9DS1Class& imu) : IMU(imu) {
+LSM9DS1_Accelerometer::LSM9DS1_Accelerometer(BoschSensorClass& imu) : IMU(imu) {
 }
 
 void LSM9DS1_Accelerometer::getXYZ(int& x, int& y, int& z) {

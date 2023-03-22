@@ -1,6 +1,6 @@
 #include "../../headers/Hardware/LSM9DS1_Gyroscope.h"
 
-LSM9DS1_Gyroscope::LSM9DS1_Gyroscope(LSM9DS1Class& imu) : IMU(imu) {
+LSM9DS1_Gyroscope::LSM9DS1_Gyroscope(BoschSensorClass& imu) : IMU(imu) {
 }
 
 void LSM9DS1_Gyroscope::getXYZ(int& x, int& y, int& z) {

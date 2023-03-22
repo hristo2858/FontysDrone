@@ -1,6 +1,4 @@
-#include <Arduino.h>
-#include <Arduino_LSM9DS1.h>
-#include <Wire.h>
+#include <Arduino_BMI270_BMM150.h>
 
 #include "models/DroneConfigModel.h"
 #include "headers/Hardware/LSM9DS1_Accelerometer.h"
@@ -14,37 +12,36 @@ LSM9DS1_Gyroscope gyro = LSM9DS1_Gyroscope(IMU);
 LSM9DS1_Magnetometer mag = LSM9DS1_Magnetometer(IMU);
 
 void setup() {
-	//build the model here
+	Serial.begin(9600);
 
-	//Serial.begin(9600);
-	//while (!Serial);
-	//Serial.println("Started");
+	while (!Serial);
+	Serial.println("Started");
 
-	//if (!IMU.begin()) {
-	//	Serial.println("Failed to initialize IMU!");
-	//	while (1);
-	//}
+	if (!IMU.begin()) {
+		Serial.println("Failed to initialize IMU!");
+		while (1);
+	}
 }
 
 void loop() {
-	//delay(500);
+	delay(500);
 
-	//int x, y, z;
+	int x, y, z;
 
-	//acc.getXYZ(x, y, z);
-	//String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
-	//Serial.println("Accelerometer Data:");
-	//Serial.println(output);
+	acc.getXYZ(x, y, z);
+	String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
+	Serial.println("Accelerometer Data:");
+	Serial.println(output);
 
-	//gyro.getXYZ(x, y, z);
-	//String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
-	//Serial.println("Gyroscope Data:");
-	//Serial.println(output);
+	gyro.getXYZ(x, y, z);
+	output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
+	Serial.println("Gyroscope Data:");
+	Serial.println(output);
 
-	//mag.getXYZ(x, y, z);
-	//String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
-	//Serial.println("Magnetometer Data:");
-	//Serial.println(output);
+	mag.getXYZ(x, y, z);
+	output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
+	Serial.println("Magnetometer Data:");
+	Serial.println(output);
 
 
 
