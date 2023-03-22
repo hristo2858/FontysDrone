@@ -1,11 +1,10 @@
-#include "Input/IFlyingInput.h"
-#include "Input/ISensorInput.h"
-#include "ControlSystem/IMotorMixingAlgorithm.h"
-#include "ControlSystem/IFeedbackErrorHandler.h"
-#include "ControlSystem/IController.h"
-#include "ControlSystem/IMotorCorrectionsToPWMSignalConverter.h"
-#include "ControlSystem/IWorldToBodyConverter.h"
-#include "Hardware/IMotor.h"
+#include "../headers/Input/Abstractions/IFlyingInput.h"
+#include "../headers/Input/Abstractions/ISensorInput.h"
+#include "../headers/ControlSystem/Abstractions/IMotorMixingAlgorithm.h"
+#include "../headers/ControlSystem/Abstractions/IFeedbackErrorHandler.h"
+#include "../headers/ControlSystem/Abstractions/IController.h"
+#include "../headers/ControlSystem/Abstractions/IWorldToBodyConverter.h"
+#include "../headers/Hardware/Abstractions/IMotor.h"
 
 struct DroneConfigModel {
 	public:

@@ -1,4 +1,4 @@
-#include "ControlSystem/PIDController.h";
+#include "./../../headers/ControlSystem/PIDController.h";
 
 PIDController::PIDController(int Kp, int Ki, int Kd) {
 	this->Kp = Kp;

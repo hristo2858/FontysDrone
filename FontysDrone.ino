@@ -1,13 +1,54 @@
-#include "DroneConfigModel.h"
+#include <Arduino.h>
+#include <Arduino_LSM9DS1.h>
+#include <Wire.h>
 
-DroneConfigModel model;
+#include "models/DroneConfigModel.h"
+#include "headers/Hardware/LSM9DS1_Accelerometer.h"
+#include "headers/Hardware/LSM9DS1_Gyroscope.h"
+#include "headers/Hardware/LSM9DS1_Magnetometer.h"
+
+//DroneConfigModel model;
+
+LSM9DS1_Accelerometer acc = LSM9DS1_Accelerometer(IMU);
+LSM9DS1_Gyroscope gyro = LSM9DS1_Gyroscope(IMU);
+LSM9DS1_Magnetometer mag = LSM9DS1_Magnetometer(IMU);
 
 void setup() {
 	//build the model here
+
+	//Serial.begin(9600);
+	//while (!Serial);
+	//Serial.println("Started");
+
+	//if (!IMU.begin()) {
+	//	Serial.println("Failed to initialize IMU!");
+	//	while (1);
+	//}
 }
 
 void loop() {
-	int xFlyingInput = model.FlyingInput.getX();
+	//delay(500);
+
+	//int x, y, z;
+
+	//acc.getXYZ(x, y, z);
+	//String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
+	//Serial.println("Accelerometer Data:");
+	//Serial.println(output);
+
+	//gyro.getXYZ(x, y, z);
+	//String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
+	//Serial.println("Gyroscope Data:");
+	//Serial.println(output);
+
+	//mag.getXYZ(x, y, z);
+	//String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
+	//Serial.println("Magnetometer Data:");
+	//Serial.println(output);
+
+
+
+	/*int xFlyingInput = model.FlyingInput.getX();
 	int yFlyingInput = model.FlyingInput.getY();
 	int zFlyingInput = model.FlyingInput.getZ();
 	int yawFlyingInput = model.FlyingInput.getYaw();
@@ -36,6 +77,6 @@ void loop() {
 	int yawCorrection = model.RollController.getCorrection(yawError);
 	int altitudeCorrection = model.RollController.getCorrection(altitudeError);
 
-	model.MotorMixingAlgorithm.setMotorCorrections(rollCorrection, pitchCorrection, yawCorrection, altitudeCorrection, model.FlyingMotors);
+	model.MotorMixingAlgorithm.setMotorCorrections(rollCorrection, pitchCorrection, yawCorrection, altitudeCorrection, model.FlyingMotors);*/
 
 }
