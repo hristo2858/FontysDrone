@@ -1,4 +1,5 @@
 #include <Arduino_BMI270_BMM150.h>
+#include <DFRobot_URM09.h>
 
 #include "models/DroneConfigModel.h"
 #include "headers/Hardware/LSM9DS1_Accelerometer.h"
@@ -11,6 +12,8 @@ LSM9DS1_Accelerometer acc = LSM9DS1_Accelerometer(IMU);
 LSM9DS1_Gyroscope gyro = LSM9DS1_Gyroscope(IMU);
 LSM9DS1_Magnetometer mag = LSM9DS1_Magnetometer(IMU);
 
+DFRobot_URM09 URM09;
+
 void setup() {
 	Serial.begin(9600);
 
@@ -21,19 +24,33 @@ void setup() {
 		Serial.println("Failed to initialize IMU!");
 		while (1);
 	}
+
+	/**
+	* I2c device number 1-127
+	* When the i2c device number is not passed, the default parameter is 0x11
+	*/
+	/*while (!URM09.begin()) {
+		Serial.println("I2c device number error");
+		delay(1000);
+	}*/
 }
 
 void loop() {
-	delay(500);
+	delay(1500);
 
 	int x, y, z;
 
 	acc.getXYZ(x, y, z);
 	String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
-	Serial.println("Accelerometer Data:");
 	Serial.println(output);
 
-	gyro.getXYZ(x, y, z);
+	float _x, _y, _z;
+	IMU.readAcceleration(_x, _y, _z);
+
+	output = "X: " + String(_x) + " Y: " + String(_y) + " Z: " + String(_z);
+	Serial.println(output);
+
+	/*gyro.getXYZ(x, y, z);
 	output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
 	Serial.println("Gyroscope Data:");
 	Serial.println(output);
@@ -41,7 +58,7 @@ void loop() {
 	mag.getXYZ(x, y, z);
 	output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
 	Serial.println("Magnetometer Data:");
-	Serial.println(output);
+	Serial.println(output);*/
 
 
 

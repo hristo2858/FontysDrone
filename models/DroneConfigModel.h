@@ -1,7 +1,7 @@
 #include "../headers/Input/Abstractions/IFlyingInput.h"
 #include "../headers/Input/Abstractions/ISensorInput.h"
 #include "../headers/ControlSystem/Abstractions/IMotorMixingAlgorithm.h"
-#include "../headers/ControlSystem/Abstractions/IFeedbackErrorHandler.h"
+#include "../headers/ControlSystem/Abstractions/IErrorInputPoint.h"
 #include "../headers/ControlSystem/Abstractions/IController.h"
 #include "../headers/ControlSystem/Abstractions/IWorldToBodyConverter.h"
 #include "../headers/Hardware/Abstractions/IMotor.h"
@@ -13,7 +13,7 @@ struct DroneConfigModel {
 
 		IMotorMixingAlgorithm MotorMixingAlgorithm;
 
-		IFeedbackErrorHandler ErrorHandler;
+		IErrorInputPoint ErrorHandler;
 
 		IController RollController;
 		IController PitchController;
