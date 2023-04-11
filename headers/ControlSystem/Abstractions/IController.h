@@ -3,7 +3,7 @@
 
 class IController {
 	public:
-		virtual int getCorrection(int error);
+		virtual float getCorrection(float error);
 };
 
 #endif

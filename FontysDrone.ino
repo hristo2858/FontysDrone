@@ -5,25 +5,26 @@
 #include "headers/Hardware/LSM9DS1_Accelerometer.h"
 #include "headers/Hardware/LSM9DS1_Gyroscope.h"
 #include "headers/Hardware/LSM9DS1_Magnetometer.h"
+#include "headers/ControlSystem/PIDController.h"
 
 //DroneConfigModel model;
 
-LSM9DS1_Accelerometer acc = LSM9DS1_Accelerometer(IMU);
-LSM9DS1_Gyroscope gyro = LSM9DS1_Gyroscope(IMU);
-LSM9DS1_Magnetometer mag = LSM9DS1_Magnetometer(IMU);
+//LSM9DS1_Accelerometer acc = LSM9DS1_Accelerometer(IMU);
+//LSM9DS1_Gyroscope gyro = LSM9DS1_Gyroscope(IMU);
+//LSM9DS1_Magnetometer mag = LSM9DS1_Magnetometer(IMU);
 
-DFRobot_URM09 URM09;
+//DFRobot_URM09 URM09;
 
 void setup() {
-	Serial.begin(9600);
+	Serial.begin(115200);
 
 	while (!Serial);
 	Serial.println("Started");
 
-	if (!IMU.begin()) {
+	/*if (!IMU.begin()) {
 		Serial.println("Failed to initialize IMU!");
 		while (1);
-	}
+	}*/
 
 	/**
 	* I2c device number 1-127
@@ -36,19 +37,19 @@ void setup() {
 }
 
 void loop() {
-	delay(1500);
 
-	int x, y, z;
 
-	acc.getXYZ(x, y, z);
-	String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
-	Serial.println(output);
+	//int x, y, z;
 
-	float _x, _y, _z;
-	IMU.readAcceleration(_x, _y, _z);
+	//acc.getXYZ(x, y, z);
+	//String output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
+	//Serial.println(output);
 
-	output = "X: " + String(_x) + " Y: " + String(_y) + " Z: " + String(_z);
-	Serial.println(output);
+	//float _x, _y, _z;
+	//IMU.readAcceleration(_x, _y, _z);
+
+	//output = "X: " + String(_x) + " Y: " + String(_y) + " Z: " + String(_z);
+	//Serial.println(output);
 
 	/*gyro.getXYZ(x, y, z);
 	output = "X: " + String(x) + " Y: " + String(y) + " Z: " + String(z);
