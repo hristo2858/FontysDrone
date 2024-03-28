@@ -1,0 +1,24 @@
+Designator,Footprint,Quantity,Value,LCSC Part #
+A1,Arduino_Nano,1,Arduino_Nano_v3.x,C5371989 
+"D1, D3, D4, D5",D_SOD-123F,4,SS24,C908678
+D2,Arduino_Nano,1,Arduino_Nano_v3.x,C2761795
+H1,MountingHole_2.7mm_M2.5,1,MountingHole,C5371989 
+J1,JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal,1,I2C 1,C157926
+J10,PinHeader_1x03_P2.54mm_Vertical,1,Motor Control 3,C2932698
+J11,PinHeader_1x03_P2.54mm_Vertical,1,Motor Control 4,C2932698
+J12,JST_PH_S3B-PH-K_1x03_P2.00mm_Horizontal,1,Ultrasonic Sensor,C157929
+J13,TerminalBlock_bornier-2_P5.08mm,1,Battery Power,C474906
+J14,PinHeader_1x01_P2.54mm_Vertical,1,RaspberryPi,C7501259
+J15,PinHeader_1x03_P2.54mm_Vertical,1,Motor 2 On/Off,C2932698
+J16,PinHeader_1x03_P2.54mm_Vertical,1,Motor 3 On/Off,C2932698
+J17,PinHeader_1x03_P2.54mm_Vertical,1,Motor 4 On/Off,C2932698
+J2,JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal,1,I2C 2,C157926
+J3,JST_PH_S6B-PH-K_1x06_P2.00mm_Horizontal,1,SPI 1,C157920
+J4,JST_PH_S6B-PH-K_1x06_P2.00mm_Horizontal,1,SPI 2,C157920
+J5,PinHeader_1x03_P2.54mm_Vertical,1,Motor 1 On/Off,C2932698
+J6,JST_PH_S5B-PH-K_1x05_P2.00mm_Horizontal,1,Camera,C157923
+J7,PinHeader_1x04_P2.54mm_Vertical,1,GPS,C2935975
+J8,PinHeader_1x03_P2.54mm_Vertical,1,Motor Control 1,C2932698
+J9,PinHeader_1x03_P2.54mm_Vertical,1,Motor Control 2,C2932698
+R1,805,1,1M,C17514
+U2,PinHeader_2x04_P2.54mm_Vertical,1,NRF24L01,C92271
