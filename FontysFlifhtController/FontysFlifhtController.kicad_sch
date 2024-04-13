@@ -2601,7 +2601,7 @@
     (property "Reference" "R1" (at 152.4 30.48 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1M" (at 152.4 33.02 90)
+    (property "Value" "10K" (at 152.4 33.02 90)
       (effects (font (size 1 1)))
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 152.4 31.242 90)
